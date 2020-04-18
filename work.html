@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf8"/>
+  <title> Downfalldetector! </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      padding: 10px;
+      background: #f1f1f1;
+    }
+
+    ul.topnav {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    ul.topnav li {
+      float: left;
+    }
+
+    ul.topnav li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    ul.topnav li a:hover:not(.active) {
+      background-color: #111;
+    }
+
+    ul.topnav li a.active {
+      background-color: #4CAF50;
+    }
+
+    ul.topnav li.right {
+      float: right;
+    }
+
+    @media screen and (max-width: 600px) {
+      ul.topnav li.right,
+      ul.topnav li {
+        float: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+<ul class="topnav">
+  <li><a href="index.html">Detector</a></li>
+  <li><a class="active" href="work.html">How it works</a></li>
+  <li class="right"><a href="contact.html">Contact</a></li>
+</ul>
+
+<section>
+  <div style="padding:0 16px;">
+    <h1>How does the Website work?</h1>
+    <p>The website accesses the Accerlerometer, which is integrated in the smartphone.
+      This accelerometer can be used to detect movements.
+      This can have many useful applications, such as caring for a senior citizen in their own home. For example, this
+      sensor can be attached to a wristband which the senior citizens then wear. The wristband can then detect when
+      there has been a rapid acceleration and then no more movement. This indicates a fall of the senior citizen. With
+      the help of such a technology, an early warning system could be developed to ensure that senior citizens do not
+      lie around alone at home for hours after a fall.
+    </p>
+  </div>
+</section>
+
+</body>
+</html>
