@@ -112,8 +112,7 @@
 
         if (window.DeviceOrientationEvent) {
             window.addEventListener("deviceorientation", handleOrientation,true);
-            handleOrientation();
-            document.getElementById("demo2").innerHTML = absolute;
+            document.getElementById("demo2").innerHTML = "kommt";
 
         } else {
             alert("Keine Device Orientation");
@@ -124,7 +123,7 @@
             var alpha    = event.alpha;
             var beta     = event.beta;
             var gamma    = event.gamma;
-            document.getElementById("demo").innerHTML = "muss";
+            document.getElementById("demo").innerHTML = absolute.toString();
         }
 
     </script>
