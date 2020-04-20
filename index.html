@@ -72,6 +72,7 @@
             background-color: #ffff1a;
         }
     </style>
+
 </head>
 
 <body>
@@ -84,15 +85,16 @@
 <section>
     <p>Choose your Action</p>
 
-    <button class="btn start" onclick="start()">Start</button>
-    <button class="btn stop" onclick="stop()">Stop</button>
-    <button class="btn debug" onclick="debug()">Debug</button>
+    <button id="startbutton" class="btn start" onclick="start()">Start</button>
+    <button id="stopbutton" class="btn stop" onclick="stop()">Stop</button>
+    <button id="debugbutton" class="btn debug" onclick="debug()">Debug</button>
 
     <p id="demo"></p>
     <p id="demo2"></p>
 
 
     <script>
+
         function start() {
             document.getElementById("demo").innerHTML = "Start";
         }
@@ -105,15 +107,24 @@
             document.getElementById("demo").innerHTML = "Debug";
         }
 
+        document.getElementById("demo2").innerHTML = "Test";
+
         if (window.DeviceOrientationEvent) {
-            window.addEventListener("deviceorientation", deviceOrientationListener);
+            window.addEventListener("deviceorientation", handleOrientation);
             document.getElementById("demo2").innerHTML = "Müsste";
 
         } else {
             alert("Keine Device Orientation");
         }
-        function deviceOrientationListener() {
+
+        function handleOrientation() {
             document.getElementById("demo2").innerHTML = "Sollte";
+            var output=document.getElementById("output");
+            var properties ="";
+            for(var prop in event) {
+                properties += prop+": "+event[prop]+"<br>";
+            }
+            output.innerHTML = properties;
         }
 
     </script>
