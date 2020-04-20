@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf8"/>
-  <title> Downfalldetectoooooooooooor! </title>
+  <title> Downfalldetector! </title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <style>
     body {
@@ -83,11 +83,25 @@
 
 <section>
   <p>Choose your Action</p>
-  <p>Choose your Action2</p>
 
-  <button class="btn start">Start</button>
-  <button class="btn stop">Stop</button>
-  <button class="btn debug">Debug</button>
+  <button class="btn start" onclick="start()">Start</button>
+  <button class="btn stop" onclick="stop()">Stop</button>
+  <button class="btn debug" onclick="debug()">Debug</button>
+
+  <p id="demo"></p>
+
+  <script>
+    function start() {
+      document.getElementById("demo").innerHTML = "Start";
+    }
+    function stop() {
+      document.getElementById("demo").innerHTML = "Stop";
+    }
+    function debug() {
+      document.getElementById("demo").innerHTML = "Debug";
+    }
+
+  </script>
 
 </section>
 
