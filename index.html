@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf8"/>
-    <title> Downfalldetectoooor! </title>
+    <title> Downfalldetector! </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <style>
         body {
@@ -83,16 +83,17 @@
 </ul>
 
 <section>
-    <p>Choose your Action</p>
+    <div>
+        <p>Choose your Action</p>
 
-    <button id="startbutton" class="btn start" onclick="start()">Start</button>
-    <button id="stopbutton" class="btn stop" onclick="stop()">Stop</button>
-    <button id="debugbutton" class="btn debug" onclick="debug()">Debug</button>
+        <button id="startbutton" class="btn start" onclick="start()">Start</button>
+        <button id="stopbutton" class="btn stop" onclick="stop()">Stop</button>
+        <button id="debugbutton" class="btn debug" onclick="debug()">Debug</button>
 
-    <p id="demo"></p>
-    <p id="demo2"></p>
-    <p id="demo3"></p>
-
+        <p id="demo"></p>
+        <p id="demo2"></p>
+        <p id="demo3"></p>
+    </div>
 
     <script>
         var absolute;
@@ -112,7 +113,7 @@
         document.getElementById("demo2").innerHTML = "Test";
 
         if (window.DeviceMotionEvent) {
-            window.addEventListener("devicemotion", handleMotion,false);
+            window.addEventListener("devicemotion", handleMotion, false);
             document.getElementById("demo2").innerHTML = "kommt";
 
         } else {
@@ -125,8 +126,8 @@
             let xyz = "[X, Y, Z]";
             document.getElementById("demo3").innerHTML = "test2";
             let accelerations = DeviceMotionEvent.acceleration;
-            document.getElementById("demo3").innerHTML = "testccccc";
-            info = xyz.replace("X", accelerations.x.toString());
+            document.getElementById("demo3").innerHTML = xyz + " testccccc";
+            xyz = xyz.replace("X", accelerations.x.toString());
             document.getElementById("demo3").innerHTML = "test3";
             info = info.replace("Y", accelerations.y);
             document.getElementById("demo3").innerHTML = "test4";
