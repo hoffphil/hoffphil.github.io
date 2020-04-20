@@ -112,14 +112,14 @@
         document.getElementById("demo2").innerHTML = "Test";
 
         if (window.DeviceOrientationEvent) {
-            window.addEventListener("deviceorientation", handleOrientation,true);
+            window.addEventListener("devicemotion", handleMotion,true);
             document.getElementById("demo2").innerHTML = "kommt";
 
         } else {
             alert("Keine Device Orientation");
         }
 
-        function handleOrientation() {
+        function handleMotion() {
             var absolute = event.absolute;
             var alpha    = event.alpha;
             var beta     = event.beta;
