@@ -1,107 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf8"/>
-  <title> Downfalldetector! </title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial;
-      padding: 10px;
-      background: #f1f1f1;
-    }
+    <meta charset="utf8"/>
+    <title> Downfalldetector! </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            padding: 10px;
+            background: #f1f1f1;
+        }
 
-    ul.topnav {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background-color: #333;
-    }
+        ul.topnav {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
 
-    ul.topnav li {
-      float: left;
-    }
+        ul.topnav li {
+            float: left;
+        }
 
-    ul.topnav li a {
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-    }
+        ul.topnav li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
 
-    ul.topnav li a:hover:not(.active) {
-      background-color: #111;
-    }
+        ul.topnav li a:hover:not(.active) {
+            background-color: #111;
+        }
 
-    ul.topnav li a.active {
-      background-color: #4CAF50;
-    }
+        ul.topnav li a.active {
+            background-color: #4CAF50;
+        }
 
-    ul.topnav li.right {
-      float: right;
-    }
+        ul.topnav li.right {
+            float: right;
+        }
 
-    @media screen and (max-width: 600px) {
-      ul.topnav li.right,
-      ul.topnav li {
-        float: none;
-      }
-    }
+        @media screen and (max-width: 600px) {
+            ul.topnav li.right,
+            ul.topnav li {
+                float: none;
+            }
+        }
 
-    .btn {
-      background-color: #4CAF50;
-      border: none;
-      color: white;
-      padding: 15px 32px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-    }
+        .btn {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
 
-    .stop {
-      background-color: #f44336;
-    }
+        .stop {
+            background-color: #f44336;
+        }
 
-    .debug {
-      background-color: #ffff1a;
-    }
-  </style>
+        .debug {
+            background-color: #ffff1a;
+        }
+    </style>
 </head>
 
 <body>
 <ul class="topnav">
-  <li><a class="active" href="index.html">Detector</a></li>
-  <li><a href="work.html">How it works</a></li>
-  <li class="right"><a href="contact.html">Contact</a></li>
+    <li><a class="active" href="index.html">Detector</a></li>
+    <li><a href="work.html">How it works</a></li>
+    <li class="right"><a href="contact.html">Contact</a></li>
 </ul>
 
 <section>
-  <p>Choose your Action</p>
+    <p>Choose your Action</p>
 
-  <button class="btn start" onclick="start()">Start</button>
-  <button class="btn stop" onclick="stop()">Stop</button>
-  <button class="btn debug" onclick="debug()">Debug</button>
+    <button class="btn start" onclick="start()">Start</button>
+    <button class="btn stop" onclick="stop()">Stop</button>
+    <button class="btn debug" onclick="debug()">Debug</button>
 
-  <p id="demo"></p>
+    <p id="demo"></p>
+    <p id="demo2"></p>
 
-  <script>
-    function start() {
-      document.getElementById("demo").innerHTML = "Start";
-    }
-    function stop() {
-      document.getElementById("demo").innerHTML = "Stop";
-    }
-    function debug() {
-      document.getElementById("demo").innerHTML = "Debug";
-    }
 
-  </script>
+    <script>
+        function start() {
+            document.getElementById("demo").innerHTML = "Start";
+        }
+
+        function stop() {
+            document.getElementById("demo").innerHTML = "Stop";
+        }
+
+        function debug() {
+            document.getElementById("demo").innerHTML = "Debug";
+        }
+
+        if (window.DeviceOrientationEvent) {
+            window.addEventListener("deviceorientation", deviceOrientationListener);
+            document.getElementById("demo2").innerHTML = "Müsste";
+
+        } else {
+            alert("Keine Device Orientation");
+        }
+        function deviceOrientationListener() {
+            document.getElementById("demo2").innerHTML = "Sollte";
+        }
+
+    </script>
 
 </section>
 
