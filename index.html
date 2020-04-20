@@ -94,6 +94,7 @@
 
 
     <script>
+        var absolute;
 
         function start() {
             document.getElementById("demo").innerHTML = "Start";
@@ -110,21 +111,20 @@
         document.getElementById("demo2").innerHTML = "Test";
 
         if (window.DeviceOrientationEvent) {
-            window.addEventListener("deviceorientation", handleOrientation);
-            document.getElementById("demo2").innerHTML = "Müsste";
+            window.addEventListener("deviceorientation", handleOrientation,true);
+            handleOrientation();
+            document.getElementById("demo2").innerHTML = absolute;
 
         } else {
             alert("Keine Device Orientation");
         }
 
         function handleOrientation() {
-            document.getElementById("demo2").innerHTML = "Solltens";
-            var output=document.getElementById("output");
-            var properties ="";
-            for(var prop in event) {
-                properties += prop+": "+event[prop]+"<br>";
-            }
-            output.innerHTML = properties;
+            var absolute = event.absolute;
+            var alpha    = event.alpha;
+            var beta     = event.beta;
+            var gamma    = event.gamma;
+            document.getElementById("demo").innerHTML = "muss";
         }
 
     </script>
