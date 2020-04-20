@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf8"/>
-    <title> Downfalldetectoooor! </title>
+    <title> Downfalldetector! </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <style>
         body {
@@ -123,13 +123,13 @@
             document.getElementById("demo3").innerHTML = "test1";
             var info, xyz = "[X, Y, Z]";
             document.getElementById("demo3").innerHTML = "test2";
-            var acceleration = eventData.acceleration;
+            var accelerations = DeviceMotionEvent.acceleration;
             document.getElementById("demo3").innerHTML = "testccccc";
-            info = xyz.replace("X", acceleration.x);
+            info = xyz.replace("X", accelerations.x);
             document.getElementById("demo3").innerHTML = "test3";
-            info = info.replace("Y", acceleration.y);
+            info = info.replace("Y", accelerations.y);
             document.getElementById("demo3").innerHTML = "test4";
-            info = info.replace("Z", acceleration.z);
+            info = info.replace("Z", accelerations.z);
             document.getElementById("demo").innerHTML = "test5";
 
         }
