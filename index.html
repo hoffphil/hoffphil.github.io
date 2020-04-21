@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf8"/>
-    <title> Downfalldeteccccccctor! </title>
+    <title> Downfalldetector! </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <style>
         body {
@@ -114,14 +114,13 @@
         }
 
         function handleMotionEvent(event) {
-            document.getElementById("demo5").innerHTML = "hier 12";
-            var x = event.accelerationIncludingGravity.x;
-            var y = event.accelerationIncludingGravity.y;
-            var z = event.accelerationIncludingGravity.z;
+            var x = event.acceleration.x;
+            var y = event.acceleration.y;
+            var z = event.acceleration.z;
 
-            document.getElementById("demo5").innerHTML = x;
-            document.getElementById("demo6").innerHTML = y;
-            document.getElementById("demo7").innerHTML = z;
+            document.getElementById("demo5").innerHTML = x.toString();
+            document.getElementById("demo6").innerHTML = y.toString();
+            document.getElementById("demo7").innerHTML = z.toString();
         }
 
         window.addEventListener("devicemotion", handleMotionEvent, true);
