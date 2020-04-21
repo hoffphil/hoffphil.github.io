@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf8"/>
-    <title> Downfalldetector! </title>
+    <title> Downfalldetecto0r! </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <style>
         body {
@@ -109,16 +109,15 @@
         function debug() {
             document.getElementById("demo").innerHTML = "Debug";
         }
-
-
-
-        /*if (window.DeviceMotionEvent) {
-            window.addEventListener("devicemotion", handler);
-            document.getElementById("demo2").innerHTML = "kommt";
+        if (window.DeviceMotionEvent) {
+            document.getElementById("demo3").innerHTML = window.DeviceMotionEvent.toString();
+            document.getElementById("demo2").innerHTML = window.DeviceMotionEvent.prototype.acceleration.x.toString();
+            window.addEventListener("devicemotion", handleMotion);
+            document.getElementById("demo").innerHTML = "kommt";
 
         } else {
             alert("Keine Device Orientation");
-        }*/
+        }
         function handleMotion() {
             document.getElementById("demo3").innerHTML = "test1";
             let info;
