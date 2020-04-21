@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf8"/>
-    <title> Downfalldetecto0r! </title>
+    <title> Downfalldetector! </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <style>
         body {
@@ -112,12 +112,24 @@
 
         document.getElementById("demo2").innerHTML = "Test";
 
-        if (window.DeviceMotionEvent) {
-            window.addEventListener("devicemotion", handleMotion);
+        /*if (window.DeviceMotionEvent) {
+            window.addEventListener("devicemotion", handler);
             document.getElementById("demo2").innerHTML = "kommt";
 
         } else {
             alert("Keine Device Orientation");
+        }*/
+
+        if ('LinearAccelerationSensor' in window) {
+            document.getElementById("demo3").innerHTML = "Generic Sensor Api";
+            window.addEventListener("devicemotion", handler);
+            document.getElementById("demo2").innerHTML = "kommt";
+
+        } else {
+            alert("Keine Device Orientation");
+        }
+        function handler() {
+
         }
 
         function handleMotion() {
