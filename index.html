@@ -100,11 +100,11 @@
     </div>
 
     <script>
-        var deviceMotionEvent = new DeviceMotionEvent("devicemotion");
+        var deviceMotionEvent = new window.DeviceMotionEvent("devicemotion");
         document.getElementById("demo7").innerHTML = deviceMotionEvent.toString() +" 7";
-        document.getElementById("demo6").innerHTML = deviceMotionEvent.acceleration.toString() +" 6";
+        document.getElementById("demo6").innerHTML = deviceMotionEvent.acceleration.valueOf() +" 6";
         document.getElementById("demo5").innerHTML = deviceMotionEvent.acceleration.x.toString() +" 5";
-        document.getElementById("demo2").innerHTML = "Test";
+        document.getElementById("demo2").innerHTML = null.toString();
 
         function start() {
             document.getElementById("demo").innerHTML = "Start";
