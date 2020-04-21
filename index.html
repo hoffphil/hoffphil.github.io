@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf8"/>
-    <title> Downfalldetector! </title>
+    <title> Downfalldetectooooor! </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <style>
         body {
@@ -119,8 +119,12 @@
             var z = event.acceleration.z;
 
             document.getElementById("demo2").innerHTML = x;
-            document.getElementById("demo3").innerHTML = y.toString();
-            document.getElementById("demo4").innerHTML = z.toString();
+            document.getElementById("demo3").innerHTML = y;
+            document.getElementById("demo4").innerHTML = z;
+
+            if(x>10 || y>10 || z>10){
+                document.getElementById("demo5").innerHTML = "sturz";
+            }
 
 
         }
