@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf8"/>
-    <title> Downfalldetect00or! </title>
+    <title> Downfalldetector! </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <style>
         body {
@@ -124,7 +124,7 @@
             var y = event.accelerationIncludingGravity.y;
             var z = event.accelerationIncludingGravity.z;
 
-            document.getElementById("demo5").innerHTML = x + " 5";
+            document.getElementById("demo5").innerHTML = x.toString() + " 5";
         }
 
         window.addEventListener("devicemotion", handleMotionEvent, true);
