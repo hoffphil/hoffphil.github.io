@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf8"/>
-    <title> Downfalldetector! </title>
+    <title> Downfalldetectoor! </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <style>
         body {
@@ -124,13 +124,13 @@
             let info;
             let xyz = "[X, Y, Z]";
             document.getElementById("demo3").innerHTML = "test2";
-            let accelerations = DeviceMotionEvent.acceleration;
+            let accelerations = DeviceMotionEvent.valueOf().acceleration;
             document.getElementById("demo3").innerHTML = xyz + " testccccc";
             //xyz = xyz.replace("X", accelerations.x.toString());
             xyz = xyz.replace("X", "hallo");
             document.getElementById("demo3").innerHTML = xyz + " test3";
-            document.getElementById("demo3").innerHTML = accelerations + " test31";
-            document.getElementById("demo3").innerHTML = accelerations.x + " test32";
+            document.getElementById("demo3").innerHTML = accelerations.x + " test31";
+            document.getElementById("demo3").innerHTML = accelerations + " test32";
             info = info.replace("Y", accelerations.y);
             document.getElementById("demo3").innerHTML = "test4";
             info = info.replace("Z", accelerations.z);
