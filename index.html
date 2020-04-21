@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf8"/>
-    <title> Downfalldetectoor! </title>
+    <title> Downfalldetector! </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <style>
         body {
@@ -112,7 +112,7 @@
 
         document.getElementById("demo2").innerHTML = "Test";
 
-        if (window.DeviceMotionEvent) {
+        if (sensor.window.DeviceMotionEvent) {
             sensor.addEventListener("devicemotion", handleMotion);
             sensor.start();
             document.getElementById("demo2").innerHTML = "kommt";
