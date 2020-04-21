@@ -118,9 +118,11 @@
             var y = event.acceleration.y;
             var z = event.acceleration.z;
 
-            document.getElementById("demo5").innerHTML = x.toString();
-            document.getElementById("demo6").innerHTML = y.toString();
-            document.getElementById("demo7").innerHTML = z.toString();
+            document.getElementById("demo2").innerHTML = x;
+            document.getElementById("demo3").innerHTML = y.toString();
+            document.getElementById("demo4").innerHTML = z.toString();
+
+
         }
 
         window.addEventListener("devicemotion", handleMotionEvent, true);
