@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf8"/>
-    <title> Downfalldetector! </title>
+    <title> Downfalldetect00or! </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <style>
         body {
@@ -117,6 +117,9 @@
             document.getElementById("demo").innerHTML = "Debug";
             if (debugModeStarted) {
                 debugModeStarted = false;
+                document.getElementById("demo2").innerHTML = "";
+                document.getElementById("demo3").innerHTML = "";
+                document.getElementById("demo4").innerHTML = "";
             } else {
                 debugModeStarted = true;
             }
@@ -126,6 +129,7 @@
             var x = event.acceleration.x;
             var y = event.acceleration.y;
             var z = event.acceleration.z;
+
             if (debugModeStarted) {
                 document.getElementById("demo2").innerHTML = x;
                 document.getElementById("demo3").innerHTML = y;
