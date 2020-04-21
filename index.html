@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf8"/>
-    <title> Downfalldetector! </title>
+    <title> Downfalldetecto0r! </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <style>
         body {
@@ -112,9 +112,8 @@
 
         document.getElementById("demo2").innerHTML = "Test";
 
-        if (sensor.window.DeviceMotionEvent) {
-            sensor.addEventListener("devicemotion", handleMotion);
-            sensor.start();
+        if (window.DeviceMotionEvent) {
+            window.addEventListener("devicemotion", handleMotion);
             document.getElementById("demo2").innerHTML = "kommt";
 
         } else {
@@ -126,7 +125,7 @@
             let info;
             let xyz = "[X, Y, Z]";
             document.getElementById("demo3").innerHTML = "test2";
-            let accelerations = sensor.acceleration;
+            let accelerations = window.DeviceMotionEvent.prototype.acceleration;
             document.getElementById("demo3").innerHTML = xyz + " testccccc";
             //xyz = xyz.replace("X", accelerations.x.toString());
             xyz = xyz.replace("X", "hallo");
