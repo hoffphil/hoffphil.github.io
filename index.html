@@ -88,7 +88,7 @@
 
         <button id="startbutton" class="btn start" onclick="start()">Start</button>
         <button id="stopbutton" class="btn stop" onclick="stop()">Stop</button>
-        <button id="debugbutton" class="btn debug" onclick="debug()">Debug/Start</button>
+        <button id="debugbutton" class="btn debug" onclick="debug()">Show Values</button>
 
         <p id="demo"></p>
         <p id="demo2"></p>
@@ -118,13 +118,12 @@
         }
 
         function debug() {
-            programmStarted = true;
-            document.getElementById("demo").innerHTML = "Debug/Start";
+            document.getElementById("demo").innerHTML = "Show Values";
             if (debugModeStarted) {
                 debugModeStarted = false;
-                document.getElementById("demo2").innerHTML = "";
-                document.getElementById("demo3").innerHTML = "";
-                document.getElementById("demo4").innerHTML = "";
+                document.getElementById("demo2").innerHTML = "0";
+                document.getElementById("demo3").innerHTML = "0";
+                document.getElementById("demo4").innerHTML = "0";
             } else {
                 debugModeStarted = true;
             }
