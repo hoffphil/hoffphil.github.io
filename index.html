@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf8"/>
-    <title> Downfalldetectooooor! </title>
+    <title> Downfalldetector! </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <style>
         body {
@@ -100,29 +100,38 @@
     </div>
 
     <script>
+        var programmStarted = false;
+        var debugModeStarted = true;
 
         function start() {
             document.getElementById("demo").innerHTML = "start";
+            programmStarted = true;
         }
 
         function stop() {
             document.getElementById("demo").innerHTML = "Stop";
+            programmStarted = false;
         }
 
         function debug() {
             document.getElementById("demo").innerHTML = "Debug";
+            if (debugModeStarted) {
+                debugModeStarted = false;
+            } else {
+                debugModeStarted = true;
+            }
         }
 
         function handleMotionEvent(event) {
             var x = event.acceleration.x;
             var y = event.acceleration.y;
             var z = event.acceleration.z;
-
-            document.getElementById("demo2").innerHTML = x;
-            document.getElementById("demo3").innerHTML = y;
-            document.getElementById("demo4").innerHTML = z;
-
-            if(x>10 || y>10 || z>10){
+            if (debugModeStarted) {
+                document.getElementById("demo2").innerHTML = x;
+                document.getElementById("demo3").innerHTML = y;
+                document.getElementById("demo4").innerHTML = z;
+            }
+            if (x > 10 || y > 10 || z > 10) {
                 document.getElementById("demo5").innerHTML = "sturz";
             }
 
