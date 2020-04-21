@@ -88,7 +88,7 @@
 
         <button id="startbutton" class="btn start" onclick="start()">Start</button>
         <button id="stopbutton" class="btn stop" onclick="stop()">Stop</button>
-        <button id="debugbutton" class="btn debug" onclick="debug()">Debug</button>
+        <button id="debugbutton" class="btn debug" onclick="debug()">Debug/Start</button>
 
         <p id="demo"></p>
         <p id="demo2"></p>
@@ -111,11 +111,15 @@
         function stop() {
             document.getElementById("demo").innerHTML = "Stop";
             programmStarted = false;
+            document.getElementById("demo2").innerHTML = "";
+            document.getElementById("demo3").innerHTML = "";
+            document.getElementById("demo4").innerHTML = "";
             document.getElementById("demo5").innerHTML = "";
         }
 
         function debug() {
-            document.getElementById("demo").innerHTML = "Debug";
+            programmStarted = true;
+            document.getElementById("demo").innerHTML = "Debug/Start";
             if (debugModeStarted) {
                 debugModeStarted = false;
                 document.getElementById("demo2").innerHTML = "";
