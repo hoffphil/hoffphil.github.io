@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf8"/>
-    <title> Downfalldetector! </title>
+    <title> Downfalldeteccccccctor! </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <style>
         body {
@@ -100,11 +100,11 @@
     </div>
 
     <script>
-        var deviceMotionEvent = new window.DeviceMotionEvent("devicemotion");
+        /*var deviceMotionEvent = new window.DeviceMotionEvent("devicemotion");
         document.getElementById("demo7").innerHTML = deviceMotionEvent.toString() + " 7";
         document.getElementById("demo6").innerHTML = deviceMotionEvent.acceleration.valueOf() + " 6";
         //document.getElementById("demo5").innerHTML = deviceMotionEvent.accelerationIncludingGravity.x +" 5";
-        document.getElementById("demo5").innerHTML = "hier 5";
+        document.getElementById("demo5").innerHTML = "hier 5";*/
 
         function start() {
             document.getElementById("demo").innerHTML = "start";
@@ -129,38 +129,6 @@
 
         window.addEventListener("devicemotion", handleMotionEvent, true);
 
-
-        /*if (window.DeviceMotionEvent) {
-            document.getElementById("demo3").innerHTML = window.DeviceMotionEvent.toString() + " 2";
-            document.getElementById("demo4").innerHTML = window.DeviceMotionEvent.prototype.toString() + " 3";
-            //document.getElementById("demo5").innerHTML = window.DeviceMotionEvent.prototype.acceleration.toString() + " 4";
-            document.getElementById("demo6").innerHTML = window.DeviceMotionEvent.prototype.acceleration.x.toString() + " 5";
-            window.addEventListener("devicemotion", handleMotion);
-            document.getElementById("demo").innerHTML = "kommt";
-
-        } else {
-            alert("Keine Device Orientation");
-        }*/
-
-
-        function handleMotion() {
-            document.getElementById("demo3").innerHTML = "test1";
-            let info;
-            let xyz = "[X, Y, Z]";
-            document.getElementById("demo3").innerHTML = "test2";
-            let accelerations = window.DeviceMotionEvent.prototype.acceleration;
-            document.getElementById("demo3").innerHTML = xyz + " testccccc";
-            //xyz = xyz.replace("X", accelerations.x.toString());
-            xyz = xyz.replace("X", "hallo");
-            document.getElementById("demo3").innerHTML = xyz + " test3";
-            document.getElementById("demo3").innerHTML = accelerations + " test31";
-            document.getElementById("demo3").innerHTML = accelerations.x + " test32";
-            info = info.replace("Y", accelerations.y);
-            document.getElementById("demo3").innerHTML = "test4";
-            info = info.replace("Z", accelerations.z);
-            document.getElementById("demo").innerHTML = "test5";
-
-        }
 
     </script>
 
