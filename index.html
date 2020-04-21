@@ -100,11 +100,6 @@
     </div>
 
     <script>
-        /*var deviceMotionEvent = new window.DeviceMotionEvent("devicemotion");
-        document.getElementById("demo7").innerHTML = deviceMotionEvent.toString() + " 7";
-        document.getElementById("demo6").innerHTML = deviceMotionEvent.acceleration.valueOf() + " 6";
-        //document.getElementById("demo5").innerHTML = deviceMotionEvent.accelerationIncludingGravity.x +" 5";
-        document.getElementById("demo5").innerHTML = "hier 5";*/
 
         function start() {
             document.getElementById("demo").innerHTML = "start";
@@ -124,7 +119,7 @@
             var y = event.accelerationIncludingGravity.y;
             var z = event.accelerationIncludingGravity.z;
 
-            document.getElementById("demo5").innerHTML = x.toString() + " 5";
+            document.getElementById("demo5").innerHTML = x.toString() + "/n" + y.toString();
         }
 
         window.addEventListener("devicemotion", handleMotionEvent, true);
