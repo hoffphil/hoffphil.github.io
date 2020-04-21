@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf8"/>
-    <title> Downfalldetect0or! </title>
+    <title> Downfalldetect00or! </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <style>
         body {
@@ -101,13 +101,13 @@
 
     <script>
         var deviceMotionEvent = new window.DeviceMotionEvent("devicemotion");
-        document.getElementById("demo7").innerHTML = deviceMotionEvent.toString() +" 7";
-        document.getElementById("demo6").innerHTML = deviceMotionEvent.acceleration.valueOf() +" 6";
-        document.getElementById("demo5").innerHTML = deviceMotionEvent.accelerationIncludingGravity.x +" 5";
-        document.getElementById("demo2").innerHTML = null.toString();
+        document.getElementById("demo7").innerHTML = deviceMotionEvent.toString() + " 7";
+        document.getElementById("demo6").innerHTML = deviceMotionEvent.acceleration.valueOf() + " 6";
+        //document.getElementById("demo5").innerHTML = deviceMotionEvent.accelerationIncludingGravity.x +" 5";
+        document.getElementById("demo5").innerHTML = "hier 5";
 
         function start() {
-            document.getElementById("demo").innerHTML = deviceMotionEvent.accelerationIncludingGravity.toString() +" 10";;
+            document.getElementById("demo").innerHTML = "start";
         }
 
         function stop() {
@@ -118,8 +118,19 @@
             document.getElementById("demo").innerHTML = "Debug";
         }
 
+        function handleMotionEvent(event) {
+            document.getElementById("demo5").innerHTML = "hier 12";
+            var x = event.accelerationIncludingGravity.x;
+            var y = event.accelerationIncludingGravity.y;
+            var z = event.accelerationIncludingGravity.z;
 
-        if (window.DeviceMotionEvent) {
+            document.getElementById("demo5").innerHTML = x + " 5";
+        }
+
+        window.addEventListener("devicemotion", handleMotionEvent, true);
+
+
+        /*if (window.DeviceMotionEvent) {
             document.getElementById("demo3").innerHTML = window.DeviceMotionEvent.toString() + " 2";
             document.getElementById("demo4").innerHTML = window.DeviceMotionEvent.prototype.toString() + " 3";
             //document.getElementById("demo5").innerHTML = window.DeviceMotionEvent.prototype.acceleration.toString() + " 4";
@@ -129,7 +140,7 @@
 
         } else {
             alert("Keine Device Orientation");
-        }
+        }*/
 
 
         function handleMotion() {
