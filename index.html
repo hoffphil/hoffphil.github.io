@@ -119,7 +119,9 @@
             var y = event.accelerationIncludingGravity.y;
             var z = event.accelerationIncludingGravity.z;
 
-            document.getElementById("demo5").innerHTML = x.toString() + "/n" + y.toString();
+            document.getElementById("demo5").innerHTML = x;
+            document.getElementById("demo6").innerHTML = y;
+            document.getElementById("demo7").innerHTML = z;
         }
 
         window.addEventListener("devicemotion", handleMotionEvent, true);
