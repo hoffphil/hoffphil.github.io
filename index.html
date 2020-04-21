@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf8"/>
-    <title> Downfalldetecto0r! </title>
+    <title> Downfalldetect0r! </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <style>
         body {
@@ -93,9 +93,14 @@
         <p id="demo"></p>
         <p id="demo2"></p>
         <p id="demo3"></p>
+        <p id="demo4"></p>
+        <p id="demo5"></p>
+        <p id="demo6"></p>
+        <p id="demo7"></p>
     </div>
 
     <script>
+
         document.getElementById("demo2").innerHTML = "Test";
 
         function start() {
@@ -110,8 +115,11 @@
             document.getElementById("demo").innerHTML = "Debug";
         }
         if (window.DeviceMotionEvent) {
+
             document.getElementById("demo3").innerHTML = window.DeviceMotionEvent.toString();
-            document.getElementById("demo2").innerHTML = window.DeviceMotionEvent.prototype.acceleration.x.toString();
+            document.getElementById("demo4").innerHTML = window.DeviceMotionEvent.prototype.toString();
+            document.getElementById("demo5").innerHTML = window.DeviceMotionEvent.prototype.acceleration.toString();
+            document.getElementById("demo6").innerHTML = window.DeviceMotionEvent.prototype.acceleration.x.toString();
             window.addEventListener("devicemotion", handleMotion);
             document.getElementById("demo").innerHTML = "kommt";
 
