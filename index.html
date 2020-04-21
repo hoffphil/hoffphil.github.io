@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf8"/>
-    <title> Downfalldetecto0r! </title>
+    <title> Downfalldetect0r! </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <style>
         body {
@@ -100,7 +100,8 @@
     </div>
 
     <script>
-
+        var deviceMotionEvent = new DeviceMotionEvent("devicemotion", acceleration);
+        document.getElementById("demo7").innerHTML = deviceMotionEvent +" gg";
         document.getElementById("demo2").innerHTML = "Test";
 
         function start() {
@@ -115,19 +116,19 @@
             document.getElementById("demo").innerHTML = "Debug";
         }
 
-        while (true) {
-            if (window.DeviceMotionEvent) {
-                document.getElementById("demo3").innerHTML = window.DeviceMotionEvent.toString() + " 2";
-                document.getElementById("demo4").innerHTML = window.DeviceMotionEvent.prototype.toString() + " 3";
-                document.getElementById("demo5").innerHTML = window.DeviceMotionEvent.prototype.acceleration.toString() + " 4";
-                document.getElementById("demo6").innerHTML = window.DeviceMotionEvent.prototype.acceleration.x.toString() + " 5";
-                window.addEventListener("devicemotion", handleMotion);
-                document.getElementById("demo").innerHTML = "kommt";
 
-            } else {
-                alert("Keine Device Orientation");
-            }
+        if (window.DeviceMotionEvent) {
+            document.getElementById("demo3").innerHTML = window.DeviceMotionEvent.toString() + " 2";
+            document.getElementById("demo4").innerHTML = window.DeviceMotionEvent.prototype.toString() + " 3";
+            document.getElementById("demo5").innerHTML = window.DeviceMotionEvent.prototype.acceleration.toString() + " 4";
+            document.getElementById("demo6").innerHTML = window.DeviceMotionEvent.prototype.acceleration.x.toString() + " 5";
+            window.addEventListener("devicemotion", handleMotion);
+            document.getElementById("demo").innerHTML = "kommt";
+
+        } else {
+            alert("Keine Device Orientation");
         }
+
 
         function handleMotion() {
             document.getElementById("demo3").innerHTML = "test1";
