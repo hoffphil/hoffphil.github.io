@@ -51,6 +51,11 @@
             }
         }
 
+        .content {
+            max-width: 500px;
+            margin: auto;
+        }
+
         .btn {
             background-color: #4CAF50;
             border: none;
@@ -71,11 +76,6 @@
         .debug {
             background-color: #ffff1a;
         }
-        alert {
-            padding: 20px;
-            background-color: #f44336;
-            color: white;
-        }
     </style>
 
 </head>
@@ -88,7 +88,7 @@
 </ul>
 
 <section>
-    <div>
+    <div class = "content">
         <p>Choose your Action</p>
 
         <button id="startbutton" class="btn start" onclick="start()">Start</button>
