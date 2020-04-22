@@ -105,7 +105,7 @@
         var xaxis = 0;
         var yaxis = 0;
         var zaxis = 0;
-        document.getElementById("demo").innerHTML = "press Start to begin";
+        document.getElementById("demo").innerHTML = "Press Start to begin";
 
         function start() {
             document.getElementById("demo").innerHTML = "Downfalldetector active";
@@ -113,11 +113,10 @@
         }
 
         function stop() {
-            document.getElementById("demo").innerHTML = "press Start to begin";
+            document.getElementById("demo").innerHTML = "Press Start to begin";
             programmStarted = false;
             document.getElementById("demo5").innerHTML = "";
             if (debugModeStarted) {
-                debugModeStarted = false;
                 document.getElementById("demo2").innerHTML = "0";
                 document.getElementById("demo3").innerHTML = "0";
                 document.getElementById("demo4").innerHTML = "0";
@@ -126,7 +125,6 @@
         }
 
         function debug() {
-            document.getElementById("demo").innerHTML = "Show Values";
             if (debugModeStarted) {
                 debugModeStarted = false;
                 document.getElementById("demo2").innerHTML = "";
