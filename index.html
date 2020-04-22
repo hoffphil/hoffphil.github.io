@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf8"/>
-    <title> Downfalldetect0or! </title>
+    <title> Downfalldetector! </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <style>
         body {
@@ -70,6 +70,11 @@
 
         .debug {
             background-color: #ffff1a;
+        }
+        alert {
+            padding: 20px;
+            background-color: #f44336;
+            color: white;
         }
     </style>
 
@@ -152,7 +157,7 @@
                     document.getElementById("demo4").innerHTML = zaxis.toString();
                 }
                 if (xaxis > 10 || yaxis > 10 || zaxis > 10) {
-                    alert("ATTENTION, the person fell down!");
+                    alert("ATTENTION! \nThe person fell down!");
                 }
             }
 
