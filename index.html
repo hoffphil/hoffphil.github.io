@@ -102,6 +102,9 @@
     <script>
         var programmStarted = false;
         var debugModeStarted = false;
+        var xaxis = 0;
+        var yaxis = 0;
+        var zaxis = 0;
 
         function start() {
             document.getElementById("demo").innerHTML = "start";
@@ -111,9 +114,6 @@
         function stop() {
             document.getElementById("demo").innerHTML = "Stop";
             programmStarted = false;
-            document.getElementById("demo2").innerHTML = "";
-            document.getElementById("demo3").innerHTML = "";
-            document.getElementById("demo4").innerHTML = "";
             document.getElementById("demo5").innerHTML = "";
         }
 
@@ -136,16 +136,16 @@
 
         function handleMotionEvent(event) {
             if (programmStarted) {
-                var x = event.acceleration.x;
-                var y = event.acceleration.y;
-                var z = event.acceleration.z;
+                xaxis = event.acceleration.x;
+                yaxis = event.acceleration.y;
+                zaxis = event.acceleration.z;
 
                 if (debugModeStarted) {
-                    document.getElementById("demo2").innerHTML = x;
-                    document.getElementById("demo3").innerHTML = y;
-                    document.getElementById("demo4").innerHTML = z;
+                    document.getElementById("demo2").innerHTML = xaxis.toString();
+                    document.getElementById("demo3").innerHTML = yaxis.toString();
+                    document.getElementById("demo4").innerHTML = zaxis.toString();
                 }
-                if (x > 10 || y > 10 || z > 10) {
+                if (xaxis > 10 || yaxis > 10 || zaxis > 10) {
                     document.getElementById("demo5").innerHTML = "sturz";
                 }
             }
