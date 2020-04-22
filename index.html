@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf8"/>
-    <title> Downfalldetector! </title>
+    <title> Downfalldetect0or! </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <style>
         body {
@@ -121,10 +121,13 @@
             document.getElementById("demo").innerHTML = "Show Values";
             if (debugModeStarted) {
                 debugModeStarted = false;
+                document.getElementById("demo2").innerHTML = "";
+                document.getElementById("demo3").innerHTML = "";
+                document.getElementById("demo4").innerHTML = "";
+            } else {
                 document.getElementById("demo2").innerHTML = "0";
                 document.getElementById("demo3").innerHTML = "0";
                 document.getElementById("demo4").innerHTML = "0";
-            } else {
                 debugModeStarted = true;
             }
         }
